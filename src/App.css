@@ -23,6 +23,7 @@
 
 body {
   background-color: #fafafa;
+  /* background-color: #111216; */
 }
 
 .gtc {
@@ -63,4 +64,13 @@ body {
 }
 .sname {
   font-family: "Poppins", sans-serif;
+}
+
+.hding {
+  margin-right: 100px;
+}
+
+.dark-mode {
+  background-color: #111216;
+  
 }

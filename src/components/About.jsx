@@ -5,7 +5,7 @@ import NavContainer from "./NavContainer";
 const About = () => {
   return (
     <div>
-      <div className="container lg:mx-[150px] p-4">
+      <div className={`container lg:mx-[150px] p-4`}>
         <div className="flex">
           <div className="hding lg:mr-[200px] my-[10px]">
             <Heading />
@@ -15,7 +15,7 @@ const About = () => {
           </div>
         </div>
         <div className="content my-[100px]">
-          <h1 className="font-bold text-[30px]">About Myself</h1>
+          <h1 className={`font-bold text-[30px]`}>About Myself</h1>
 
           <br />
           <p>
