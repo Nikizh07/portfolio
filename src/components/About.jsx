@@ -1,25 +1,33 @@
 import React from "react";
 import Heading from "./Heading";
 import NavContainer from "./NavContainer";
+import DarkModeButton from "./DarkModeButton";
+import MobileMenu from "./MobileMenu";
 
 const About = () => {
   return (
     <div>
       <div className={`container lg:mx-[150px] p-4`}>
         <div className="flex">
-          <div className="hding lg:mr-[200px] my-[10px]">
+          <div className="hding lg:mr-[200px] my-[15px]">
             <Heading />
+          </div>
+          <div className="right-5 absolute ">
+            <DarkModeButton/>
           </div>
           <div className="ncontainer my-[20px] hidden lg:inline-block">
             <NavContainer />
           </div>
         </div>
-        <div className="content my-[100px]">
+        <div className="menu">
+          <MobileMenu/>
+        </div>
+        <div className="content my-[50px]">
           <h1 className={`font-bold text-[30px]`}>About Myself</h1>
 
           <br />
           <p>
-            <div className="container w-[400px]">
+            <div className="container w-100% lg:w-[400px]">
               <p className="abt-myself">
                 Hello there! I'm{" "}
                 <span className="text-[#5b5b5b] font-bold">Nikizh</span> from

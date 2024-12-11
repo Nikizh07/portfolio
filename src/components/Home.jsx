@@ -4,6 +4,7 @@ import NavContainer from "./NavContainer";
 import Heading from "./Heading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import DarkModeButton from "./DarkModeButton";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -11,15 +12,15 @@ const Home = () => {
     return savedMode ? JSON.parse(savedMode) : true; // Default to true if no saved value
   });
 
-  useEffect(() => {
-    localStorage.setItem("darkMode", JSON.stringify(darkMode));
-    document.body.style.backgroundColor = darkMode ? "#111216" : "#ffffff";
-    document.body.style.color = darkMode ? "#cecece" : "#111216";
-  }, [darkMode]);
+  // useEffect(() => {
+  //   localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  //   document.body.style.backgroundColor = darkMode ? "#111216" : "#ffffff";
+  //   document.body.style.color = darkMode ? "#cecece" : "#111216";
+  // }, [darkMode]);
 
-  const handleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  // const handleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   return (
     <div>
@@ -30,8 +31,9 @@ const Home = () => {
           }`}
         >
           <Heading />
-          <div className="dmode mx-[1100px] absolute">
-            <FontAwesomeIcon icon={faMoon} size="2x" onClick={handleDarkMode} />
+          <div className="dmode right-5 absolute">
+            {/* <FontAwesomeIcon icon={faMoon} size="2x" onClick={handleDarkMode} /> */}
+            <DarkModeButton/>
           </div>
         </div>
         <br />
