@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const NavContainer = () => {
   return (
     <div>
-        <div className="skills container flex flex-col lg:flex-row gap-6 text-[#868686] p-2">
+        <div className="skills container flex flex-col lg:flex-row gap-8 lg:gap-6 text-[#868686] p-2">
           <p id="aboutme">
             <Link
               to="/about"

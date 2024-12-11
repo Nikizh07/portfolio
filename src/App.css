@@ -6,8 +6,14 @@
 @media (max-width: 768px) {
   .abt-myself {
     font-size: 15px;
-
   }
+  
+.lnk-title {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+}
+
 }
 
 @keyframes name {
@@ -86,10 +92,11 @@ body {
   font-weight: bold;
   border-color: #cccccc;
   border-width: 2px;
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
 .lnks:hover {
+  transform: translateY(-5px);
   box-shadow: none;
 }
 
@@ -134,3 +141,15 @@ body {
   animation-duration: 0.8s;
   font-family: "Poppins", sans-serif;
 }
+
+.lnk-title {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+}
+.lcontainer {
+  font-family: "Poppins", sans-serif;
+  animation-name: slideInLeft;
+  animation-duration: 0.5s;
+}
+
