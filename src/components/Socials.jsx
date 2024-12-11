@@ -1,7 +1,6 @@
 import React from "react";
 import Heading from "./Heading";
 import NavContainer from "./NavContainer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DarkModeButton from "./DarkModeButton";
 import MobileMenu from "./MobileMenu";
 
@@ -40,7 +39,6 @@ const Socials = () => {
             </a>
           </div>
           <div className="lnks inline-block w-[200px] lg:w-[10vw]">
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
             <a href="https://www.linkedin.com/in/nikizh/" className="p-2">
               Linkedin
             </a>
