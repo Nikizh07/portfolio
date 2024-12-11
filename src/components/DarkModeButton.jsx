@@ -5,7 +5,7 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 const DarkModeButton = () => {
   const [darkMode, setDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
-    return savedMode ? JSON.parse(savedMode) : true;
+    return savedMode ? JSON.parse(savedMode) : false;
   });
 
   useEffect(() => {
