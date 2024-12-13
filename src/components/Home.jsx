@@ -37,6 +37,9 @@ const Home = () => {
           </div>
         </div>
         <br />
+        <div className="watermark">
+          <h1>NIKIZH</h1>
+        </div>
         <p
           className={`abm-text font-bold hidden lg:block ${
             darkMode ? "text-[#cecece]" : "black"

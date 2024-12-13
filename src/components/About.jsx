@@ -15,7 +15,7 @@ const About = () => {
           <div className="right-5 absolute ">
             <DarkModeButton/>
           </div>
-          <div className="ncontainer my-[20px] hidden lg:inline-block">
+          <div className="ncontainer my-[8px] hidden lg:inline-block">
             <NavContainer />
           </div>
         </div>

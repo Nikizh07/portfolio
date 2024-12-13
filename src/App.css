@@ -54,6 +54,15 @@
   }
 }
 
+@keyframes watermark {
+  0% {
+    left: 2000px;
+  }
+  100% {
+    left: -2000px;
+  }
+}
+
 .heading {
   font-family: "Poppins", sans-serif;
   font-size: 30px;
@@ -92,6 +101,7 @@ body {
   font-weight: bold;
   border-color: #cccccc;
   border-width: 2px;
+  display: inline-block;
   transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
@@ -153,3 +163,11 @@ body {
   animation-duration: 0.5s;
 }
 
+.watermark {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  opacity: 0.03;
+  z-index: -999;
+  font-size: 200px;
+  animation: watermark 5s infinite linear;
+}

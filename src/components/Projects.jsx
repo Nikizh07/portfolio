@@ -16,7 +16,7 @@ const Projects = () => {
             <DarkModeButton />
           </div>
 
-          <div className="fuck my-[20px] hidden lg:flex">
+          <div className="fuck my-[8px] hidden lg:flex">
             <NavContainer />
           </div>
         </div>

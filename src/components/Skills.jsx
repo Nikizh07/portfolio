@@ -10,13 +10,13 @@ const Skills = () => {
     <div>
       <div className="container lg:mx-[150px] p-2">
         <div className="flex">
-          <div className="hding lg:mr-[200px] my-[10px]">
+          <div className="hding lg:mr-[200px] my-[15px]">
             <Heading />
           </div>
           <div className="right-5 top-6 absolute lg:my-[20px]">
           <DarkModeButton/>
           </div>
-          <div className="ncontainer my-[20px] hidden lg:flex">
+          <div className="ncontainer my-[8px] hidden lg:flex">
             <NavContainer />
           </div>
         </div>
