@@ -5,7 +5,7 @@ const data = {
             content: [
                {name: "Python" , icon: ""},
                {name: "Javascript" , icon: ""},
-               {name: "Dart" , icon: ""},
+               {name: "Golang" , icon:""}
         
             ]
         },
@@ -43,7 +43,6 @@ const data = {
         {
             name: "Tools",
             content: [
-                {name: "Docker" , icon: ""},
                 {name: "Git" , icon: ""},
                 {name: "Github" , icon: ""},
                 {name: "VsCode" , icon: ""}
