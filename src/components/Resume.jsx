@@ -26,9 +26,8 @@ const Resume = () => {
         <div className="hhding">
           <p className="lnk-title">Resume</p>
         </div>
-
-
-        </div>
+        <embed src="src/assets/Resume.pdf" width="100%" height="600px" />
+      </div>
     </div>
   )
 }
