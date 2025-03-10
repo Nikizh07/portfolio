@@ -1,8 +1,8 @@
-import React from 'react'
-import Heading from './Heading'
-import DarkModeButton from './DarkModeButton'
-import NavContainer from './NavContainer'
-import MobileMenu from './MobileMenu'
+import React from "react";
+import Heading from "./Heading";
+import DarkModeButton from "./DarkModeButton";
+import NavContainer from "./NavContainer";
+import MobileMenu from "./MobileMenu";
 
 const Resume = () => {
   return (
@@ -21,17 +21,22 @@ const Resume = () => {
           </div>
         </div>
         <br />
-        <MobileMenu/>
+        <MobileMenu />
         <br />
         <div className="hhding">
           <p className="lnk-title">Resume</p>
         </div>
         <br />
-       <object data='src/assets/Resume.pdf' type='application/pdf' height={"600px"} width={"100%"}/>
+        <iframe
+          src="https://drive.google.com/file/d/1vsyNdcF5c4mKtJWJ1b3bPnzG71MMY9wY/preview"
+          width="640"
+          height="480"
+          allow="autoplay"
+          className="invisible lg:visible"
+        ></iframe>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Resume
-
+export default Resume;
