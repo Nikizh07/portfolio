@@ -26,7 +26,7 @@ const Resume = () => {
         <div className="hhding">
           <p className="lnk-title">Resume</p>
         </div>
-        <embed src="/assets/Resume.pdf" width="100%" height="600px" />
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vRGT9TpCxFL2CW3oH8QretMlTfSyMX_IFoOLu34WiY9zLlqaE448gxnRrw4uy4FiFdoxs51Vzs8bGEL/pub?embedded=true"></iframe>
       </div>
     </div>
   )
