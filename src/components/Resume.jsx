@@ -26,6 +26,7 @@ const Resume = () => {
         <div className="hhding">
           <p className="lnk-title">Resume</p>
         </div>
+        <br />
        <object data='src/assets/Resume.pdf' type='application/pdf' height={"600px"} width={"100%"}/>
       </div>
     </div>
@@ -33,3 +34,4 @@ const Resume = () => {
 }
 
 export default Resume
+
