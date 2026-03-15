@@ -10,8 +10,7 @@ const DarkModeButton = () => {
 
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
-    document.body.style.backgroundColor = darkMode ? "#111216" : "#ffffff";
-    document.body.style.color = darkMode ? "#cecece" : "#111216";
+    document.body.classList.toggle("dark-theme", darkMode);
   }, [darkMode]);
 
   const handleDarkMode = () => {
@@ -20,7 +19,7 @@ const DarkModeButton = () => {
 
   return (
     <div className="dark-mode-button">
-      <FontAwesomeIcon icon={faMoon} size="2x" onClick={handleDarkMode} />
+      <FontAwesomeIcon icon={faMoon} size="2x" onClick={handleDarkMode} className="cursor-pointer" />
     </div>
   );
 };

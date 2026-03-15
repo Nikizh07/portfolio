@@ -1,72 +1,37 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import NavContainer from "./NavContainer";
 import Heading from "./Heading";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import DarkModeButton from "./DarkModeButton";
 
 const Home = () => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    return savedMode ? JSON.parse(savedMode) : true; // Default to true if no saved value
-  });
-
-  // useEffect(() => {
-  //   localStorage.setItem("darkMode", JSON.stringify(darkMode));
-  //   document.body.style.backgroundColor = darkMode ? "#111216" : "#ffffff";
-  //   document.body.style.color = darkMode ? "#cecece" : "#111216";
-  // }, [darkMode]);
-
-  // const handleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  // };
-
   return (
     <div>
-      <div className={`container lg:mx-[150px]`}>
-        <div
-          className={`hding my-[20px] p-2 lg:p-0 flex ${
-            darkMode ? "text-[#cecece]" : "black"
-          }`}
-        >
-          <Heading />
-          <div className="dmode right-5 absolute">
-            {/* <FontAwesomeIcon icon={faMoon} size="2x" onClick={handleDarkMode} /> */}
-            <DarkModeButton/>
+      <div className="container page-shell lg:mx-[150px] lg:px-0">
+        <div className="page-header my-2">
+          <div className="max-w-[220px] sm:max-w-none">
+            <Heading />
+          </div>
+          <div className="corner-toggle pt-1">
+            <DarkModeButton />
           </div>
         </div>
-        <br />
-        <div className="watermark">
+        <div className="watermark hidden lg:block">
           <h1>NIKIZH</h1>
         </div>
-        <p
-          className={`abm-text font-bold hidden lg:block ${
-            darkMode ? "text-[#cecece]" : "black"
-          }`}
-        >
+        <p className="abm-text mt-8 font-bold text-lg sm:text-xl">
           About Myself
         </p>
-        <br />
-        <p
-          className={`about hidden lg:block lg:w-[400px] ${
-            darkMode ? "text-[#cecece]" : "black"
-          }`}
-        >
+        <p className="about mt-4 w-full max-w-[420px] text-sm sm:text-base">
           Hello there, I'm a self taught develop who's passionate about
           programming, I'm experienced in some popular languages as well, Feel
           free to contact me.
         </p>
-        <br />
         <a
           href="mailto:nikizh007@gmail.com"
-          className={`gtc border-2 bg-[#cccccc] ${
-            darkMode ? "text-[#111216]" : ""
-          } border-black hover:bg-black hover:text-white hidden lg:inline-block`}
+          className="gtc mt-6 inline-flex w-full justify-center border-2 sm:w-auto"
         >
           Get in touch
         </a>
-        <div className="nv lg:my-[170px]">
+        <div className="nv mt-10 lg:my-[170px]">
           <NavContainer />
         </div>
       </div>

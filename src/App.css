@@ -1,18 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&display=swap');
 
+:root {
+  --bg: #faf7f2;
+  --text: #2f2e2b;
+  --muted-text: #6e685f;
+  --soft-text: #8a8379;
+  --surface: #f2ece4;
+  --surface-strong: #e1d8cc;
+  --surface-raised: #fffdf9;
+  --border: #b9aea0;
+  --shadow: #d7cdc0;
+  --nav-text: #6f665c;
+  --nav-active-bg: #5d554c;
+  --nav-active-text: #f5efe8;
+  --button-bg: #d8cfc2;
+  --button-text: #2f2e2b;
+  --button-border: #6f655a;
+  --button-hover-bg: #2f2e2b;
+  --button-hover-text: #f5efe8;
+  --menu-bg: #7b7268;
+  --menu-text: #faf7f2;
+  --skill-pill-bg: #f7f3ec;
+  --skill-pill-border: #cbbfb1;
+  --skill-pill-text: #4a463f;
+  --skill-pill-icon-bg: #fffdf9;
+  --skill-pill-icon-text: #7d756b;
+  --resume-panel: #f1ebe3;
+  --resume-frame: #fffdf9;
+  --resume-frame-border: #d8cec1;
+  --danger: #b64949;
+}
+
 
 
 
 @media (max-width: 768px) {
   .abt-myself {
     font-size: 15px;
+    line-height: 1.8;
   }
-  
-.lnk-title {
-  font-weight: bold;
-  font-family: "Poppins", sans-serif;
-  font-size: 70px;
-}
+
+  .heading {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .lnk-title {
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hding {
+    margin-right: 0;
+  }
+
+  .lnks {
+    padding: 0.65rem 0.85rem;
+    box-shadow: 3px 3px 0px 1px #cecece;
+  }
+
+  .watermark {
+    display: none;
+  }
 
 }
 
@@ -80,15 +131,56 @@
 }
 
 body {
-  background-color: #fafafa;
-  /* background-color: #111216; */
+  background-color: var(--bg);
+  overflow-x: hidden;
+  color: var(--text);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+body.dark-theme {
+  --bg: #3a3d42;
+  --text: #e2ddd6;
+  --muted-text: #c8c1b9;
+  --soft-text: #a9a39b;
+  --surface: #45484d;
+  --surface-strong: #51555a;
+  --surface-raised: #5a5e64;
+  --border: #6e7278;
+  --shadow: #2e3034;
+  --nav-text: #ccc5bd;
+  --nav-active-bg: #e0d8cf;
+  --nav-active-text: #2f2e2b;
+  --button-bg: #c7beb4;
+  --button-text: #2f2e2b;
+  --button-border: #9e968d;
+  --button-hover-bg: #ece4db;
+  --button-hover-text: #2f2e2b;
+  --menu-bg: #5d6167;
+  --menu-text: #f3eee7;
+  --skill-pill-bg: #52565b;
+  --skill-pill-border: #72767c;
+  --skill-pill-text: #ece6de;
+  --skill-pill-icon-bg: #62666c;
+  --skill-pill-icon-text: #f1ece5;
+  --resume-panel: #474a50;
+  --resume-frame: #fcfaf6;
+  --resume-frame-border: #6c7076;
+  --danger: #f08f8f;
 }
 
 .gtc {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   padding: 0.3em 1.3em;
-  transition: background-color 0.6s ease;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-color: var(--button-border);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.gtc:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
 }
 
 .skills {
@@ -97,17 +189,28 @@ body {
 
 .lnks {
   padding: 0.5rem; ;
-  box-shadow: 5px 5px 0px 2px #cecece;
+  box-shadow: 5px 5px 0px 2px var(--shadow);
   font-weight: bold;
-  border-color: #cccccc;
+  border-color: var(--border);
   border-width: 2px;
   display: inline-block;
+  background-color: var(--surface);
+  color: var(--text);
   transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
 .lnks:hover {
   transform: translateY(-5px);
   box-shadow: none;
+}
+
+.nav-link {
+  color: var(--nav-text);
+}
+
+.nav-link-active {
+  background-color: var(--nav-active-bg);
+  color: var(--nav-active-text);
 }
 
 .content {
@@ -117,15 +220,33 @@ body {
   animation-timing-function: ease-out;
 }
 .abt-myself {
-  color: #b0b0b0;
+  color: var(--muted-text);
+}
+
+.accent-text {
+  color: var(--text);
 }
 
 .skbox {
-  box-shadow: 5px 5px 0px 2px #cecece;
+  box-shadow: 5px 5px 0px 2px var(--shadow);
   animation-name: slideUp;
   animation-duration: 0.8s;
   animation-timing-function: ease-out;
+  background-color: var(--surface);
+  border-color: var(--border);
 }
+
+.skill-chip {
+  background-color: var(--skill-pill-bg);
+  border-color: var(--skill-pill-border);
+  color: var(--skill-pill-text);
+}
+
+.skill-chip-icon {
+  background-color: var(--skill-pill-icon-bg);
+  color: var(--skill-pill-icon-text);
+}
+
 .skname {
   font-family: "roboto mono", monospace;
 }
@@ -142,8 +263,14 @@ body {
   
 }
 
+.dark-mode-button {
+  color: inherit;
+}
+
 .mmenu {
   font-family: "roboto mono", monospace;
+  background-color: var(--menu-bg);
+  color: var(--menu-text);
 }
 
 .abm-text {
@@ -157,10 +284,52 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 40px;
 }
+
+.page-shell {
+  padding: 1rem;
+}
+
+.page-header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-right: 4rem;
+}
+
+.corner-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.page-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
 .lcontainer {
   font-family: "Poppins", sans-serif;
   animation-name: slideInLeft;
   animation-duration: 0.5s;
+}
+
+.resume-panel {
+  background-color: var(--resume-panel);
+  border-color: var(--border);
+}
+
+.resume-frame {
+  background-color: var(--resume-frame);
+  border-color: var(--resume-frame-border);
+}
+
+.muted-copy {
+  color: var(--muted-text);
+}
+
+.danger-copy {
+  color: var(--danger);
 }
 
 .watermark {

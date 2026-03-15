@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const NavContainer = () => {
@@ -6,33 +5,33 @@ const NavContainer = () => {
 
   return (
     <div>
-      <div className="skills container flex flex-col lg:flex-row gap-8 lg:gap-6 text-[#868686] p-2">
+      <div className="skills container grid grid-cols-2 gap-3 p-0 sm:gap-4 lg:flex lg:flex-row lg:gap-6 lg:p-2">
         <Link to="/about">
-          <div className={`lnks ${location.pathname === '/about' ? 'bg-gray-600 text-white' : ''}`}>
+          <div className={`nav-link lnks w-full text-center ${location.pathname === '/about' ? 'nav-link-active' : ''}`}>
             About Me
           </div>
         </Link>
 
         <Link to="/skills">
-          <div className={`lnks ${location.pathname === '/skills' ? 'bg-gray-600 text-white' : ''}`}>
+          <div className={`nav-link lnks w-full text-center ${location.pathname === '/skills' ? 'nav-link-active' : ''}`}>
             Skills
           </div>
         </Link>
         
         <Link to="/links">
-          <div className={`lnks ${location.pathname === '/links' ? 'bg-gray-600 text-white' : ''}`}>
+          <div className={`nav-link lnks w-full text-center ${location.pathname === '/links' ? 'nav-link-active' : ''}`}>
             Links
           </div>
         </Link>
 
         <Link to="/projects">
-          <div className={`lnks ${location.pathname === '/projects' ? 'bg-gray-600 text-white' : ''}`}>
+          <div className={`nav-link lnks w-full text-center ${location.pathname === '/projects' ? 'nav-link-active' : ''}`}>
             Projects
           </div>
         </Link>
 
         <Link to="/resume">
-          <div className={`lnks ${location.pathname === '/resume' ? 'bg-gray-600 text-white' : ''}`}>
+          <div className={`nav-link lnks w-full text-center ${location.pathname === '/resume' ? 'nav-link-active' : ''}`}>
             Resume
           </div>
         </Link>
